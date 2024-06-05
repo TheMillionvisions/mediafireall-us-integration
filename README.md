@@ -51,10 +51,22 @@ Integration Guide: Media Firewall
     
                11. MediaLightVehicle
     
-               12. VehicleListing(Car), VehicleListing(Truck/Bus), VehicleListing(Motorcycle) 
-                VehicleListing(Car.Truck/Bus.Motorcycle), 
-                VehicleListing(Truck/Bus.Motorcycle),
-                VehicleListing(Car.Motorcycle), VehicleListing(Car.Truck/Bus)
+               12. VehicleListing(Car), VehicleListing(Truck/Bus), VehicleListing(Motorcycle), 
+                   VehicleListing(Car.Truck/Bus.Motorcycle), 
+                   VehicleListing(Truck/Bus.Motorcycle),
+                   VehicleListing(Car.Motorcycle), VehicleListing(Car.Truck/Bus)
+
+               13. AIGeneratedImage
+    
+               14. ImageSearch
+    
+               15. SnapcodeQR
+    
+               16. Distinguished
+    
+               17. ProfilePicture(Single), ProfilePicture(Visibility), ProfilePicture(Centered), 
+                   ProfilePicture(Single.Visibility.Centered), ProfilePicture(Single.Visibility),
+                   ProfilePicture(Visibility.Centered), ProfilePicture(Single.Centered)
     
      2.2 Filtering Media:
     
