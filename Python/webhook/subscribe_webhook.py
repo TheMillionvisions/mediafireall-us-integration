@@ -2,10 +2,10 @@ import requests
 
 userID = "" #provide your userId here 
 webhooks = [
-        "https://example.com/webhook","https://example1.com/webhook"
+        "https://example.com/webhook","https://example1.com/webhook"   #provide your webhook urls here 
         ]
 
-url = "https://apimediafirewall-us.millionvisions.ai/notification/webhook"
+url = "https://{BASE_URL}/notification/webhook"
 
 body = {
     "userId" : userID,
