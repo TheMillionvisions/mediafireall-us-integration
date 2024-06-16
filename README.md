@@ -14,7 +14,7 @@ Integration Guide: Media Firewall
     
         ● Open Postman and set the request method to POST.
         
-        ● Use the endpoint: https://apimediafirewall-us.millionvisions.ai/oauth/token
+        ● Use the endpoint: https://{BASE_URL}/oauth/token
         
         ● Include the API Key and UserId in the request body to obtain the OAuth token.
         
@@ -74,9 +74,11 @@ Integration Guide: Media Firewall
     
          ● Endpoint:
     
-         https://apimediafirewall-us.millionvisions.ai/mfw/media/{userId}/url/filters?filters={filters}&
+         https://{BASE_URL}/moderation/{orgId}/{userId}/url/filters?filters={filters}&
          mediaUrl={mediaUrl}&apikey=
     
+         ● Replace {orgId} with your actual orgId.
+
          ● Replace {userId} with your actual userId.
     
         ● Replace {filters} with the filter keys from 2.1 (for multiple filters, separate keys with
@@ -94,7 +96,7 @@ Integration Guide: Media Firewall
     
          ● Endpoint:
     
-         https://apimediafirewall-us.millionvisions.ai/mfw/model/config/{userId}/{videoId}?apikey=
+         https://{BASE_URL}/mfw/model/config/{userId}/{videoId}?apikey=
     
          ● Replace {userId} with your userId.
     
@@ -110,7 +112,7 @@ Integration Guide: Media Firewall
     
          ● Endpoint:
     
-         https://apimediafirewall-us.millionvisions.ai/notification/webhook/{userId}?webhookUrl={w
+         https://{BASE_URL}/notification/webhook/{userId}?webhookUrl={w
          ebhookUrl}&apikey=
     
          ● Replace {userId} with your actual UserId.
