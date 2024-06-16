@@ -1,6 +1,6 @@
 import requests
 
-userID = "" #provide your userId here 
+userID = "YOUR_USERID_HERE" #provide your userId here 
 webhooks = [
         "https://example.com/webhook","https://example1.com/webhook"   #provide your webhook urls here 
         ]
@@ -12,10 +12,10 @@ body = {
     "webhooks" : webhooks
 }
 
-headers = {'Content-Type': 'application/json','Authorization':'Bearer token'}
+headers = {'Content-Type': 'application/json','Authorization':'Bearer YOUR_TOKEN_HERE'}
 
 params = {
-  'apikey': '' #provide your apikey here
+  'apikey': 'YOUR_APIKEY_HERE' #provide your apikey here
 }
 
 response = requests.post(url,params=params,json=body ,headers=headers)

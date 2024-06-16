@@ -1,12 +1,12 @@
 import requests
 import time
 
-
+BASE_URL = "BASE_URL_HERE" #provide the base url here
 User_ID = "YOUR_USERID_HERE" #provide your userId here
 Video_ID = "YOUR_VIDEOID_HERE" #provide videoId here
 
 
-url = 'https://{BASE_URL}/mfw/model/config/{User_ID}/{Video_ID}'
+url = f'https://{BASE_URL}/mfw/model/config/{User_ID}/{Video_ID}'
 
 params = {
   'apikey': 'YOUR_APIKEY_HERE', #provide your api key here
