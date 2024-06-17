@@ -15,6 +15,8 @@ Integration Guide: Media Firewall
         ● Open Postman and set the request method to POST.
         
         ● Use the endpoint: https://{BASE_URL}/oauth/token
+
+        ● Replace {BASE_URL} with the provided base URL.
         
         ● Include the API Key and UserId in the request body to obtain the OAuth token.
         
@@ -76,6 +78,8 @@ Integration Guide: Media Firewall
     
          https://{BASE_URL}/moderation/{orgId}/{userId}/url/filters?filters={filters}&
          mediaUrl={mediaUrl}&apikey=
+
+         ● Replace {BASE_URL} with the provided base URL.
     
          ● Replace {orgId} with your actual orgId.
 
@@ -97,6 +101,8 @@ Integration Guide: Media Firewall
          ● Endpoint:
     
          https://{BASE_URL}/mfw/model/config/{userId}/{videoId}?apikey=
+
+         ● Replace {BASE_URL} with the provided base URL.
     
          ● Replace {userId} with your userId.
     
@@ -106,24 +112,82 @@ Integration Guide: Media Firewall
     
          ● Add the obtained OAuth token as a Bearer token in the request headers.
     
-     2.4 Integrating Webhook:
+     2.4 Polling Results By Time:
+    
+         ● Use a GET  request to poll the results by Time.
+    
+         ● Endpoint:
+    
+         https://{BASE_URL}/mfw/model/config/{userId}/all?complete=true&descend=true&end={End_Date}&pageNumber=0&pageSize=10&start={Start_Date}&apikey=
+    
+         ● Replace {BASE_URL} with the provided base URL.
+
+         ● Replace {userId} with your userId.
+    
+         ● Provide 'true' or 'false' ,to filter completed items, for the param 'complete'.
+    
+         ● Provide 'true' or 'false' ,to sort results in descending order, for the param 'descend'.
+
+         ● Provide the end date and time in this format 'yyyy-mm-dd hh:mm:ss'.
+
+         ● Provide the page number you want to view.
+    
+         ● Provide the number of elements to be displayed per page.
+
+         ● Provide the start date and time in this format 'yyyy-mm-dd hh:mm:ss'.
+    
+         ● Fill the api key.
+    
+         ● Add the obtained OAuth token as a Bearer token in the request headers.
+
+     2.5 Polling Results By Time and Type:
+    
+         ● Use a GET  request to poll the results by Time and Type.
+    
+         ● Endpoint:
+    
+         https://{BASE_URL}/mfw/model/config/{userId}/type?complete=true&descend=true&end={End_Date}&pageNumber=0&pageSize=10&safe=true&start={Start_Date}&apikey=
+    
+         ● Replace {BASE_URL} with the provided base URL.
+
+         ● Replace {userId} with your userId.
+    
+         ● Provide 'true' or 'false' ,to filter completed items, for the param 'complete'.
+    
+         ● Provide 'true' or 'false' ,to sort results in descending order, for the param 'descend'.
+
+         ● Provide the end date and time in this format 'yyyy-mm-dd hh:mm:ss'.
+
+         ● Provide the page number you want to view.
+    
+         ● Provide the number of elements to be displayed per page.
+
+         ● Provide 'true' or 'false' ,to filter by safe or unsafe content, for the param 'safe'.
+
+         ● Provide the start date and time in this format 'yyyy-mm-dd hh:mm:ss'.
+    
+         ● Fill the api key.
+    
+         ● Add the obtained OAuth token as a Bearer token in the request headers.
+    
+     2.6 Integrating Webhook:
     
          ● Integrate your webhook with the Media Firewall to receive results directly.
     
          ● Endpoint:
     
-         https://{BASE_URL}/notification/webhook/{userId}?webhookUrl={w
-         ebhookUrl}&apikey=
+         https://{BASE_URL}/notification/webhook?apikey=
+
+         ● Replace {BASE_URL} with the provided base URL.
     
-         ● Replace {userId} with your actual UserId.
-    
-         ● Replace {webhookUrl} with your actual webhookUrl.
+         ● Include the UserId and Webhook Urls in the request body.
     
          ● Fill the api key.
+
+         ● Add the obtained OAuth token as a Bearer token in the request headers.
     
-         ● After posting the webhook, a message will be sent to the webhook. Click on the
+         ● After posting the webhook, a message will be sent to the webhooks. Click on the
          subscribeUrl in the message to subscribe.
     
          ● Content moderation events will be sent to the integrated webhook.
     
-         ● Add the obtained OAuth token as a Bearer token in the request headers.
